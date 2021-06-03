@@ -1,13 +1,11 @@
 
-// AOS.init({
-// 	easing: 'ease-in-quad',
-// });
+//This event is when the BTS and CAST sections are not in the view of the user, they are faded and if they are in the view, they are refaded
+//just to make the user think that it just appeared as he scrolled downS
 
-
-window.addEventListener("scroll", function() {showFunction(document.getElementById("BTS"))});
+window.addEventListener("scroll", function() {showFunction(document.getElementById("BTS"))});			
 window.addEventListener("scroll", function() {showFunction(document.getElementById("CAST"))});
 
-function showFunction(element) {
+function showFunction(element) { //basically uses the function findPos to find the position and then substract 700 for scroll timings
     if (document.body.scrollTop > findPos(element) - 700 || document.documentElement.scrollTop > findPos(element) - 700) {
         element.style.animation = "fade 3s";
     } else {
@@ -15,7 +13,7 @@ function showFunction(element) {
     }
 }
 
-// TO SCROLLLLLLLLLLL
+// find the position of the object from the top and returns this number
 function findPos(obj) {
 	var pos = 0;
 	if (obj.offsetParent) {
@@ -26,20 +24,25 @@ function findPos(obj) {
 	}
 }
 
+//three 'buttons' in the navigation bar
 let tovideo = document.getElementById('tovideo');
 let tocast = document.getElementById('tocast');
 let tobts = document.getElementById('tobts');
 
+//scrolling to the given position when clicked
+
 tovideo.onclick = function() {
-	window.scroll(0,findPos(document.getElementById("finalvideo"))-125);
+	window.scroll(0,findPos(document.getElementById("finalvideo"))-125); 	//-125 for the topscreen, since it is fixed
 }
 tocast.onclick = function() {
-	window.scroll(0,findPos(document.getElementById("finalcast"))-70);
+	window.scroll(0,findPos(document.getElementById("finalcast"))-70);		//-70 for the topscreen, since it is fixed
 }
 tobts.onclick = function() {
-	window.scroll(0,findPos(document.getElementById("finalbts"))-70);
+	window.scroll(0,findPos(document.getElementById("finalbts"))-70);		//-70 for the topscreen, since it is fixed
 }
 
+//the below code is needed to make the effect of 'vanish' to the topscreen navvigation bar section
+//so if the user scrolls down, it vanishes, otherwise it stays 
 
 var prevScroll = window.pageYOffset;
 window.onscroll = function() {
@@ -51,6 +54,14 @@ window.onscroll = function() {
 	}
 	prevScroll = currentScroll;
 }
+
+//THE BELOW CODE WAS JUST FOR THE EXPERIMENTS AND DON'T SERVE ANY PURPOSE IN THE WEBSITE
+
+//I have tried many things and either I found another solution in css or they didn't work or worked but needed some modifications that I didn't have time for
+
+//I left it just for myself, maybe come back to it and check it out again. It is my first website, history starts here:) 
+
+
 // let myNavBar = document.getElementById('navbar');
 // let myNav = document.getElementById('navigation');
 
@@ -147,4 +158,3 @@ window.onscroll = function() {
 // }
 
 // let myButton = document.querySelector('button');
-

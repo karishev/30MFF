@@ -205,6 +205,10 @@ b:hover {
 	font-size: 80px;
 }
 
+.myimg:hover {
+	transform: scale(1.15);
+}
+
 div.row {
 	display: flex;
 	flex-direction: row;

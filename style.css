@@ -154,7 +154,7 @@ body {
 	margin-top: 4%;
 	padding: 10px;
 	width: 110%;
-	height: 300vh;
+	height: 320vh;
 	display: flex;
 	flex-direction: column;
 	overflow-x: auto;
@@ -236,6 +236,9 @@ div.actors {
 	font-size: 80px;
 }
 
+#BTS {
+	height: 120vh;
+}
 .behindthescenes {
 	display: flex;
 	flex-direction: column;

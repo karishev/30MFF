@@ -292,6 +292,12 @@ div.actors {
 	line-height: 33px;
 	vertical-align: baseline;
 }
+.justcompany:visited{
+	color:black;
+}
+.justcompany:hover { 
+	color:darkblue;
+}
 
 .allrights {
 	padding-top: 8%;

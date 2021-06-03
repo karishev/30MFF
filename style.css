@@ -1,4 +1,6 @@
-@font-face {
+/*Code written by Shyngys Karishev for Assingment 1*/
+
+@font-face {																	/*Adding some fonts and naming them*/
 	font-family: Karla;
 	src: url("fonts/Karla.ttf");
 }
@@ -25,18 +27,33 @@
 	src: url("fonts/JosefinSans-SemiBoldItalic.ttf");
 }
 
-html {
+@keyframes fade {																/* animation that changes the opacity from 0 to full opacity */
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+@keyframes refade {																/*animation that changes the opacity from full opacity to 0*/
+	from {opacity: 1;}
+	to {opacity: 0;}
+}
+
+b:hover {																		/*If you hover over this kind of text, it will change its font*/
+	font-family: JosefinBoldItalic;
+}
+
+
+html {																			/*Making the smooth scroll behavior, so when section in navigation is clicked it will smoothly scroll there*/
 	scroll-behavior: smooth;
 }
 
-body {
-	width: 80%;
+body {																			/*I made the margins at the beginning, so the bottom line of the top part would look better*/
+	width: 80%;																	/*The problem however then was that I wanted to make the margin 0, but it lead to some errors, so I left it*/
 	margin-left: 5%;
 	margin-right: 5%;
 }
 
 
-.topscreen {
+.topscreen {																	/*topscreen block, made background white and some of the change in structures using margin, padding, top*/
 	background:white;
 	width: 85%;
 	top: 1.1%;
@@ -47,10 +64,13 @@ body {
 	margin-top: -10px;
 	padding-top: 10px;
 	border-bottom: 3px solid black;
-	transition: top 0.6s;
-}
+	transition: top 0.6s;														/*transition for the top, I have a script that when user scrolls down the topscreen is hidden*/
+}																				/*but when user scrolls up it comes back*/
 
-.logo {
+
+
+												
+.logo {																			/*the next 5 codeblocks are just the design and adjusting for the logo*/
 	position: absolute;
 	width:12%;
 	padding-left: -5px;/
@@ -94,9 +114,10 @@ body {
 	top: 10px;
 	margin-left: 120%;
 	font-family: Popit;
-}
+}																				/*End of the logo design*/
 
-.logo:hover .ray1{
+
+.logo:hover .ray1{																/*If we hover over the logo, the rays are 'getting out of the circle'*/
 	left: 15%;
 	top: 23%;
 }
@@ -106,11 +127,11 @@ body {
 	top: 65%;
 }
 
-.logo:hover .name-logo {
+.logo:hover .name-logo {														/*If we hover over the logo, the name of company changes the color*/
 	color: lightblue;
 }
 
-#navigation {
+#navigation {																	/*Here are just the adjustments for the navigation with display flex, so it is in the end*/
 	width: 100%;
 	display: flex;
 	flex-direction: row;
@@ -121,21 +142,21 @@ body {
 
 }
 
-.navi {
+.navi {																			/*just making the font size of the sections in navigation*/
 	font-size: 25px;
 }
 
-.navi:visited{
+.navi:visited{																	/*so if we have already clicked there it wouldn't show it*/
 	color:black;
 }
 
-.navi:hover { 
+.navi:hover { 																	/*for interactivity purposes, if you hover over the nav bar it will shoe pointer and change the color*/
 	color:lightblue;
 	cursor: pointer;
 }
 
 
-#navigation li {
+#navigation li {																/*Adjusting the unordered list making everything look nice*/
 	padding-right: 4%;
 	
 	margin-block-start: 1em;
@@ -145,16 +166,12 @@ body {
 	padding-inline-start: 40px;
 }
 
-#toreviews {
-	margin-right: -4%;
-}
-
-.scroll {
-	font-size: 22px;
+.scroll {																		/*The scroll part of the body, which is the website body in my case*/
+	font-size: 22px;															/*Making some adjustments, overflow, flex with direction and centralize everything*/
 	margin-top: 4%;
 	padding: 10px;
 	width: 110%;
-	height: 320vh;
+	height: 320vh;																/*Height is 320vh because we have 3 sections that are 100vh and some space at the bottom*/
 	display: flex;
 	flex-direction: column;
 	overflow-x: auto;
@@ -165,51 +182,45 @@ body {
 }
 
 
-
-iframe {
-	padding-left: 15%;
-}
-
-.scroll section {
+.scroll section {																/*for all of the sections of scroll(FILM, CAST, BTS) making adjustments and the height of 100vh*/
 	height: 100vh;
 	width: 100%;
 	border-bottom: 3px solid black;
 }
-#finalvideo {
-	text-align: center;
+
+#finalvideo {																	/*The next three codeblocks are for the FILM section*/
+	text-align: center;															/*Centralizing everything and making the font*/
 	font-weight: bold;
 	font-size: 80px;
 }
-.filmpart {
-	display: flex;
+.filmpart {																		/*So the film is in a row with the reviews and left of them*/
+	display: flex;																
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
 	padding-bottom:6%;
 }
 
-.videotext {
+.videotext {																	/*Making the reviews in the row, some css code is in the html file for them*/
 	display: flex;
 	flex-direction: column;
-}
+}																				/*End of the FILM section*/
 
-b:hover {
-	font-family: JosefinBoldItalic;
-}
 
-#finalcast {
-	padding-top: 2%;	padding-bottom:0;
+#finalcast {																	/*Start of the CAST section with adjustments*/							
+	padding-top: 2%;
+	padding-bottom:0;
 	text-align: center;
 	width: 100%;
 	font-weight: bold;
 	font-size: 80px;
 }
 
-.myimg:hover {
+.myimg:hover {																	/*If hover over the cast images, the image will become bigger*/
 	transform: scale(1.15);
 }
 
-div.row {
+.row {																			/*row, which is basically four actors part with info*/
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
@@ -217,21 +228,14 @@ div.row {
 	align-items: stretch;
 
 }
-div.actors {
+.actors {
 	height: 50%;
 	padding-bottom: 10%;
 	text-align: center;
-}
-/*div.actors:hover {
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(100%);
-	position: relative;
-	transition: 1s;
-}*/
+}																				/*End of the Cast section*/	
 
 
-
-#finalbts {
+#finalbts {																		/*Start of the BTS section with adjustments*/
 	padding-top: 2%;
 	padding-bottom:0;
 	text-align: center;
@@ -243,15 +247,15 @@ div.actors {
 #BTS {
 	height: 120vh;
 }
-.behindthescenes {
+.behindthescenes {																/*Making everything centralized and in columns*/
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	padding-left: 0;
-}
+}																				/*End of the BTS section*/
 
-.information {
+.information {																	/*Start of the endofscreen banner with information*/
 	width: 111.4%;
 	padding-top: 30px;
 	border: 1px solid black;
@@ -292,7 +296,7 @@ div.actors {
 	line-height: 33px;
 	vertical-align: baseline;
 }
-.justcompany:visited{
+.justcompany:visited{															/*same as the navigation bar visited and hover*/
 	color:black;
 }
 .justcompany:hover { 
@@ -318,16 +322,6 @@ div.actors {
 	padding-inline-start:0px;
 }
 
-.youtube:hover, .facebook:hover, .insta:hover {
+.youtube:hover, .facebook:hover, .insta:hover {									/*Adding interactivity, so if you hover the logos of social medias, they will be a little bit transparent*/
 	opacity: 80%;
-}
-
-@keyframes fade { /* from 0 to full opacity */
-	from {opacity: 0;}
-	to {opacity: 1;}
-}
-
-@keyframes refade {
-	from {opacity: 1;}
-	to {opacity: 0;}
-}
+}																				/*End of the endofscreen banner with information*/

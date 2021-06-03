@@ -7,7 +7,7 @@ I had no prior experience in html, css or javascript, so everything was hard for
 [Wireframe 27.05.pdf](https://github.com/karishev/karishev.github.io/files/6591412/Wireframe.27.05.pdf)
 
 
-I started to make the website, using the help of stackoverflow and w3schools websites. This is the result that I got after two days.
+I started to make the website, using the help of stackoverflow and w3schools. This is the result that I got after two days.
 ![chrome_USjgVQNLbf](https://user-images.githubusercontent.com/71120362/120640793-b3762380-c494-11eb-8a58-da779bdf978d.png)
 ![chrome_fmS8eti3fO](https://user-images.githubusercontent.com/71120362/120640806-b6711400-c494-11eb-82f4-f145125558bd.png)
 

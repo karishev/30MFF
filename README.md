@@ -1,4 +1,5 @@
-# karishev.github.io
+# 30MFF
+
 
 The website created to represent the 30 MFF shooted suring the class. My team made a film about thinking about the ideas how to shoot the film, while being presented as an object in our room. I made a website of the company that made that film and decided to present it. You can think about it as leaf website of the main company website. It contains sections: Film, Cast, and Behind the scenes. 
 
